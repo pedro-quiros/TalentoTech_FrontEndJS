@@ -1,0 +1,139 @@
+@font-face {
+    font-family: 'ARCADECLASSIC';
+    src: url('../fonts/ARCADECLASSIC.TTF') format('truetype'); /* Varios formatos para mejor compatibilidad */
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    position: relative; /* Necesario para posicionar el pseudo-elemento */
+    font-family: 'ARCADECLASSIC'; /* Fuente personalizada */
+}
+
+/* Define la animación */
+@keyframes moverIzqADerecha {
+    0% {
+        transform: translateX(-100%); /* Comienza fuera de la pantalla a la izquierda */
+    }
+    50% {
+        transform: translateX(0); /* Llega a la posición original (en el centro) */
+    }
+    100% {
+        transform: translateX(0); /* Se detiene en el centro */
+    }
+}
+
+.card {
+    margin-top: 20px; /* Margen superior */
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-style: solid;
+}
+.card-text {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}	
+/* Estilo personalizado para el botón "Comprar" */
+.btn-comprar {
+    background-color: green;
+    color: white;
+    border: none;
+}
+
+/* Estilo personalizado para el botón "Agregar al carrito" */
+.btn-carrito {
+    background-color: blue;
+    color: white;
+    border: none;
+}
+
+/* Aplicar la animación al título */
+.tituloH1 {
+    color: rgb(255, 0, 0);
+    text-align: center;
+    font-size: 65px;
+    animation: moverIzqADerecha 4s ease-in-out forwards; /* 3 segundos, curva suave, se detiene al final */
+}
+
+#carouselExampleIndicators {
+    width: 45%; /* Define el ancho del carrusel */
+    margin: 0 auto; /* Centra el carrusel horizontalmente */
+    margin-top: 35px; /* Margen superior */
+
+
+
+}
+.carousel-caption d-none d-md-block, h4{
+    width: 90%; /* Ajusta el ancho del texto */
+    margin: 0 auto; /* Centra el carrusel horizontalmente */
+    background-color: #000000ac;   ;
+    font-size: 30px;
+    border-style: solid;
+
+}
+
+/* Cambiar color de las flechas */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: #000000; /* Cambiar a blanco o el color que prefieras */
+    width: 35px; /* Tamaño de las flechas */
+    height: 35px; /* Tamaño de las flechas */
+    border-radius: 50%; /* Forma circular */
+}
+
+/* Cambiar color de las flechas al pasar el ratón */
+.carousel-control-prev-icon:hover, .carousel-control-next-icon:hover {
+    background-color: #555555; /* Gris oscuro cuando pasa el ratón */
+}
+
+
+
+.carousel-item img {
+    width: 100%; /* Hace que las imágenes ocupen el 100% del ancho del contenedor */
+    height: 350px; /* Ajusta la altura de las imágenes a un valor fijo */
+    object-fit: contain; /* Ajusta la imagen al contenedor */
+    background-color: #ffffffb1; /* Color de fondo */
+    border-color: black;
+    border-style: solid;
+    border-radius: 80px;
+}
+
+body::before {
+    
+    content: ""; /* Requiere un contenido vacío */
+    position: absolute; /* Posiciona el pseudo-elemento */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/background1.jpg'); /* Imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    background-position: center center; /* Centra la imagen */
+    background-attachment: fixed; /* Fija la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    opacity: 0.5; /* Aplica la opacidad solo al fondo */
+    z-index: -1; /* Coloca el pseudo-elemento detrás del contenido */
+}
+
+#navbar {
+    
+    font-family: 'ARCADECLASSIC'; /* Fuente personalizada para el pie de página */
+    width: 100%; /* Asegura que el navbar ocupe el 100% del ancho */
+    
+ 
+}
+#navbar .nav-link:hover {
+    color: #333; /* Cambia el color del texto al pasar el ratón */
+    background-color: #ff9f0f; /* Fondo naranja más oscuro */
+    border-radius: 5px; /* Opcional: agrega bordes redondeados */
+    
+}
+
+footer {
+    font-family: 'ARCADECLASSIC'; /* Fuente personalizada para el pie de página */
+    text-align: center; /* Centra el texto en el pie de página */
+    padding: 10px; /* Agrega relleno para separar el contenido */
+    background-color: #ff9f0f; /* Fondo naranja más oscuro */
+    color:rgb(255, 255, 255); /* Color de texto */
+    font-size:20px; 
+}
+
+
