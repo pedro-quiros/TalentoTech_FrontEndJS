@@ -114,24 +114,23 @@ body::before {
 }
 
 #navbar {
-    
-    font-family: 'ARCADECLASSIC'; /* Fuente personalizada para el pie de página */
+    font-family: 'ARCADECLASSIC'; /* Fuente personalizada para el navbar */
     width: 100%; /* Asegura que el navbar ocupe el 100% del ancho */
-    
- 
+    background-color: hsl(36, 100%, 57%); /* Fondo naranja oscuro */
 }
+
+/* Estilos para los enlaces del navbar al hacer hover */
 #navbar .nav-link:hover {
     color: #333; /* Cambia el color del texto al pasar el ratón */
-    background-color: #ff9f0f; /* Fondo naranja más oscuro */
-    border-radius: 5px; /* Opcional: agrega bordes redondeados */
-    
+    background-color: hwb(203 53% 1%); /* Fondo naranja oscuro */
+    border-radius: 5px; /* Agrega bordes redondeados a los enlaces */
 }
 
 footer {
     font-family: 'ARCADECLASSIC'; /* Fuente personalizada para el pie de página */
     text-align: center; /* Centra el texto en el pie de página */
     padding: 10px; /* Agrega relleno para separar el contenido */
-    background-color: #ff9f0f; /* Fondo naranja más oscuro */
+    background-color: hsl(36, 100%, 57%); /* Fondo naranja oscuro */
     color:rgb(255, 255, 255); /* Color de texto */
     font-size:20px; 
 }
