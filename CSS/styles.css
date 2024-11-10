@@ -23,16 +23,16 @@ body {
 
 /* El footer siempre estará al final */
 #footer {
-    font-family: 'ARCADECLASSIC'; /* Fuente personalizada para el pie de página */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center; /* Centra el texto en el pie de página */
     padding: 10px; /* Agrega relleno para separar el contenido */
     background-color: hsl(36, 100%, 57%); /* Fondo naranja oscuro */
     color: rgb(255, 255, 255); /* Color de texto */
-    font-size: 25px;
+    font-size: 20px;
     margin-top: auto; /* Asegura que el footer se mantenga al final */
+
     
 }
-
 
 .form-container {
    
