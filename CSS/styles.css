@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: 'ARCADECLASSIC';
     src: url('../fonts/ARCADECLASSIC.TTF') format('truetype'); /* Varios formatos para mejor compatibilidad */
@@ -5,10 +6,61 @@
     font-style: normal;
 }
 
+
+/* Modificar el body para usar flexbox */
 body {
-    position: relative; /* Necesario para posicionar el pseudo-elemento */
+    position: relative;
     font-family: 'ARCADECLASSIC'; /* Fuente personalizada */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el body ocupe al menos el 100% de la altura de la ventana */
 }
+
+/* Contenedor principal que debe ocupar el espacio restante */
+.main-content {
+    flex-grow: 1; /* Ocupa el espacio restante disponible */
+}
+
+/* El footer siempre estará al final */
+#footer {
+    font-family: 'ARCADECLASSIC'; /* Fuente personalizada para el pie de página */
+    text-align: center; /* Centra el texto en el pie de página */
+    padding: 10px; /* Agrega relleno para separar el contenido */
+    background-color: hsl(36, 100%, 57%); /* Fondo naranja oscuro */
+    color: rgb(255, 255, 255); /* Color de texto */
+    font-size: 25px;
+    margin-top: auto; /* Asegura que el footer se mantenga al final */
+    
+}
+
+
+.form-container {
+   
+    margin:auto; /* Centra el formulario horizontalmente */
+    text-align: center;
+    padding: 20px; /* Agrega relleno al formulario */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: hsl(0, 0%, 0%); /* Fondo naranja oscuro */
+    color: rgb(255, 255, 255); /* Color de texto */
+    font-size: 20px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    border-width: 5px;
+    width: 50%; /* Ancho del formulario */
+    margin-top: 50px; /* Margen superior */
+    margin-bottom: 50px; /* Margen inferior */
+
+
+}
+.form-group{
+    margin: 10px; /* Margen entre los elementos del formulario */
+}
+
+
+    
+
+
+
 
 /* Define la animación */
 @keyframes moverIzqADerecha {
@@ -23,11 +75,21 @@ body {
     }
 }
 
+
+.grid-container-cards {
+    display: grid;
+    grid-template-columns: repeat(3, auto); /* Configura dos columnas de ancho igual */
+    grid-gap: 10px;
+    padding: 80px;
+    justify-items: center; /* Centrar las tarjetas horizontalmente */
+   
+}
+
 .card {
     margin-top: 20px; /* Margen superior */
-    border-radius: 20px; /* Bordes redondeados */
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    border-style: solid;
+
+
+    border-color: black;
 }
 .card-text {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -91,9 +153,10 @@ body {
     height: 350px; /* Ajusta la altura de las imágenes a un valor fijo */
     object-fit: contain; /* Ajusta la imagen al contenedor */
     background-color: #ffffffb1; /* Color de fondo */
-    border-color: black;
+
     border-style: solid;
-    border-radius: 80px;
+
+    
 }
 
 body::before {
@@ -117,22 +180,24 @@ body::before {
     font-family: 'ARCADECLASSIC'; /* Fuente personalizada para el navbar */
     width: 100%; /* Asegura que el navbar ocupe el 100% del ancho */
     background-color: hsl(36, 100%, 57%); /* Fondo naranja oscuro */
+    
+}
+
+
+#navbar .nav-item{
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    border-width: 2px;
+    border-radius: 10px;
+    margin: 7px;
+
+
 }
 
 /* Estilos para los enlaces del navbar al hacer hover */
 #navbar .nav-link:hover {
-    color: #333; /* Cambia el color del texto al pasar el ratón */
     background-color: hwb(203 53% 1%); /* Fondo naranja oscuro */
-    border-radius: 5px; /* Agrega bordes redondeados a los enlaces */
+    border-radius: 10px;
+
+   
 }
-
-footer {
-    font-family: 'ARCADECLASSIC'; /* Fuente personalizada para el pie de página */
-    text-align: center; /* Centra el texto en el pie de página */
-    padding: 10px; /* Agrega relleno para separar el contenido */
-    background-color: hsl(36, 100%, 57%); /* Fondo naranja oscuro */
-    color:rgb(255, 255, 255); /* Color de texto */
-    font-size:20px; 
-}
-
-
