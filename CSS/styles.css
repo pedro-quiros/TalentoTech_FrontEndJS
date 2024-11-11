@@ -1,203 +1,206 @@
-
 @font-face {
     font-family: 'ARCADECLASSIC';
-    src: url('../fonts/ARCADECLASSIC.TTF') format('truetype'); /* Varios formatos para mejor compatibilidad */
+    src: url('../fonts/ARCADECLASSIC.TTF') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
-
-/* Modificar el body para usar flexbox */
+/* Estilo para el body */
 body {
     position: relative;
-    font-family: 'ARCADECLASSIC'; /* Fuente personalizada */
+    font-family: 'ARCADECLASSIC';
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Asegura que el body ocupe al menos el 100% de la altura de la ventana */
+    min-height: 100vh;
+    margin: 0;
 }
 
-/* Contenedor principal que debe ocupar el espacio restante */
+/* Contenedor principal para ocupar el espacio restante */
 .main-content {
-    flex-grow: 1; /* Ocupa el espacio restante disponible */
+    flex-grow: 1;
 }
 
-/* El footer siempre estará al final */
+/* Footer fijo al final */
 #footer {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center; /* Centra el texto en el pie de página */
-    padding: 10px; /* Agrega relleno para separar el contenido */
-    background-color: hsl(36, 100%, 57%); /* Fondo naranja oscuro */
-    color: rgb(255, 255, 255); /* Color de texto */
-    font-size: 20px;
-    margin-top: auto; /* Asegura que el footer se mantenga al final */
-
-    
-}
-
-.form-container {
-   
-    margin:auto; /* Centra el formulario horizontalmente */
     text-align: center;
-    padding: 20px; /* Agrega relleno al formulario */
-    border-radius: 10px; /* Bordes redondeados */
-    background-color: hsl(0, 0%, 0%); /* Fondo naranja oscuro */
-    color: rgb(255, 255, 255); /* Color de texto */
+    padding: 10px;
+    background-color: hsl(36, 100%, 57%);
+    color: #fff;
     font-size: 20px;
-    border-style: solid;
-    border-color: rgb(255, 255, 255);
-    border-width: 5px;
-    width: 50%; /* Ancho del formulario */
-    margin-top: 50px; /* Margen superior */
-    margin-bottom: 50px; /* Margen inferior */
-
-
-}
-.form-group{
-    margin: 10px; /* Margen entre los elementos del formulario */
+    margin-top: auto;
 }
 
+/* Estilo para el formulario */
+.form-container {
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #000;
+    color: #fff;
+    font-size: 20px;
+    border: 5px solid #fff;
+    width: 90%; /* Más adaptable */
+    max-width: 600px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
 
-    
+/* Margen para cada grupo del formulario */
+.form-group {
+    margin: 10px;
+}
 
-
-
-
-/* Define la animación */
+/* Definición de animación */
 @keyframes moverIzqADerecha {
     0% {
-        transform: translateX(-100%); /* Comienza fuera de la pantalla a la izquierda */
+        transform: translateX(-100%);
     }
     50% {
-        transform: translateX(0); /* Llega a la posición original (en el centro) */
+        transform: translateX(0);
     }
     100% {
-        transform: translateX(0); /* Se detiene en el centro */
+        transform: translateX(0);
     }
 }
 
-
+/* Contenedor grid de tarjetas */
 .grid-container-cards {
     display: grid;
-    grid-template-columns: repeat(3, auto); /* Configura dos columnas de ancho igual */
-    grid-gap: 10px;
-    padding: 80px;
-    justify-items: center; /* Centrar las tarjetas horizontalmente */
-   
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajuste automático */
+    gap: 10px;
+    padding: 20px;
+    justify-items: center;
 }
 
 .card {
-    margin-top: 20px; /* Margen superior */
-
-
+    margin-top: 20px;
     border-color: black;
 }
+
 .card-text {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}	
-/* Estilo personalizado para el botón "Comprar" */
+}
+
+/* Estilo de botones */
 .btn-comprar {
     background-color: green;
     color: white;
     border: none;
 }
 
-/* Estilo personalizado para el botón "Agregar al carrito" */
 .btn-carrito {
     background-color: blue;
     color: white;
     border: none;
 }
 
-/* Aplicar la animación al título */
+/* Título animado */
 .tituloH1 {
     color: rgb(255, 0, 0);
     text-align: center;
     font-size: 65px;
-    animation: moverIzqADerecha 4s ease-in-out forwards; /* 3 segundos, curva suave, se detiene al final */
+    animation: moverIzqADerecha 4s ease-in-out forwards;
 }
 
+/* Estilos del carrusel */
 #carouselExampleIndicators {
-    width: 45%; /* Define el ancho del carrusel */
-    margin: 0 auto; /* Centra el carrusel horizontalmente */
-    margin-top: 35px; /* Margen superior */
-
-
-
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 35px;
 }
-.carousel-caption d-none d-md-block, h4{
-    width: 90%; /* Ajusta el ancho del texto */
-    margin: 0 auto; /* Centra el carrusel horizontalmente */
-    background-color: #000000ac;   ;
+
+.carousel-caption h4 {
+    width: 90%;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.7);
     font-size: 30px;
-    border-style: solid;
-
+    border: solid 2px #fff;
+    color: #fff;
+    padding: 5px;
 }
 
-/* Cambiar color de las flechas */
+/* Flechas del carrusel */
 .carousel-control-prev-icon, .carousel-control-next-icon {
-    background-color: #000000; /* Cambiar a blanco o el color que prefieras */
-    width: 35px; /* Tamaño de las flechas */
-    height: 35px; /* Tamaño de las flechas */
-    border-radius: 50%; /* Forma circular */
+    background-color: #000;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
 }
 
-/* Cambiar color de las flechas al pasar el ratón */
 .carousel-control-prev-icon:hover, .carousel-control-next-icon:hover {
-    background-color: #555555; /* Gris oscuro cuando pasa el ratón */
+    background-color: #555;
 }
-
-
 
 .carousel-item img {
-    width: 100%; /* Hace que las imágenes ocupen el 100% del ancho del contenedor */
-    height: 350px; /* Ajusta la altura de las imágenes a un valor fijo */
-    object-fit: contain; /* Ajusta la imagen al contenedor */
-    background-color: #ffffffb1; /* Color de fondo */
-
-    border-style: solid;
-
-    
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+    background-color: #ffffffb1;
+    border: solid;
 }
 
+/* Fondo del body */
 body::before {
-    
-    content: ""; /* Requiere un contenido vacío */
-    position: absolute; /* Posiciona el pseudo-elemento */
+    content: "";
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('../images/background1.jpg'); /* Imagen de fondo */
-    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
-    background-position: center center; /* Centra la imagen */
-    background-attachment: fixed; /* Fija la imagen de fondo */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    opacity: 0.5; /* Aplica la opacidad solo al fondo */
-    z-index: -1; /* Coloca el pseudo-elemento detrás del contenido */
+    background-image: url('../images/background1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    z-index: -1;
 }
 
+/* Navbar */
 #navbar {
-    font-family: 'ARCADECLASSIC'; /* Fuente personalizada para el navbar */
-    width: 100%; /* Asegura que el navbar ocupe el 100% del ancho */
-    background-color: hsl(36, 100%, 57%); /* Fondo naranja oscuro */
-    
+    font-family: 'ARCADECLASSIC';
+    width: 100%;
+    background-color: hsl(36, 100%, 57%);
+    padding: 10px 0;
 }
 
-
-#navbar .nav-item{
-    border-style: solid;
-    border-color: white;
-    border-width: 2px;
+#navbar .nav-item {
+    border: 2px solid white;
     border-radius: 10px;
     margin: 7px;
-
-
 }
 
-/* Estilos para los enlaces del navbar al hacer hover */
 #navbar .nav-link:hover {
-    background-color: hwb(203 53% 1%); /* Fondo naranja oscuro */
+    background-color: hwb(203 53% 1%);
     border-radius: 10px;
+}
 
-   
+/* Media Queries */
+@media (max-width: 768px) {
+    .tituloH1 {
+        font-size: 35px;
+    }
+    #carouselExampleIndicators {
+        width: 90%;
+    }
+    .grid-container-cards {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .grid-container-cards {
+        padding: 10px;
+    }
+    #navbar {
+        padding: 5px 0;
+    }
+    .form-container {
+        width: 90%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
 }
