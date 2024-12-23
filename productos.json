@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "titulo": "Remera Final Fantasy",
+        "descripcion": "Remera de alta calidad con diseño inspirado en Final Fantasy.",
+        "precio": 15000,
+        "imagen": "/images/item_01_FF.png"
+    },
+    {
+        "id": 2,
+        "titulo": "Remera Final Fantasy VII",
+        "descripcion": "Diseño exclusivo de Final Fantasy VII, edición limitada.",
+        "precio": 15000,
+        "imagen": "/images/item_02_FF.png"
+    },
+    {
+        "id": 3,
+        "titulo": "Remera Kirby",
+        "descripcion": "Remera con diseño adorable de Kirby, ideal para fanáticos.",
+        "precio": 15000,
+        "imagen": "/images/item_03_Kirby.png"
+    },
+    {
+        "id": 4,
+        "titulo": "Remera Donkey Kong",
+        "descripcion": "Remera con estampado de Donkey Kong, perfecta para gamers retro.",
+        "precio": 16000,
+        "imagen": "/images/item_04_DK.png"
+    },
+    {
+        "id": 5,
+        "titulo": "Mochila Final Fantasy",
+        "descripcion": "Mochila premium con detalles de Final Fantasy.",
+        "precio": 25000,
+        "imagen": "/images/item_05_FF_Bag.png"
+    },
+    {
+        "id": 6,
+        "titulo": "Taza Super Mario",
+        "descripcion": "Taza de cerámica con diseño de Super Mario Bros.",
+        "precio": 5000,
+        "imagen": "/images/item_06_Mario_Cup.png"
+    },
+    {
+        "id": 7,
+        "titulo": "Llavero Zelda",
+        "descripcion": "Llavero metálico con el emblema de la Trifuerza.",
+        "precio": 2000,
+        "imagen": "/images/item_07_Zelda_Keychain.png"
+    },
+    {
+        "id": 8,
+        "titulo": "Poster Metroid",
+        "descripcion": "Poster artístico de Samus Aran en alta definición.",
+        "precio": 7000,
+        "imagen": "/images/item_08_Metroid_Poster.png"
+    },
+    {
+        "id": 9,
+        "titulo": "Figura Coleccionable Pokémon",
+        "descripcion": "Figura coleccionable de Pikachu, edición especial.",
+        "precio": 30000,
+        "imagen": "/images/item_09_Pikachu_Figure.png"
+    },
+    {
+        "id": 10,
+        "titulo": "Campera Sonic",
+        "descripcion": "Campera moderna con estampado de Sonic the Hedgehog.",
+        "precio": 35000,
+        "imagen": "/images/item_10_Sonic_Jacket.png"
+    }
+]

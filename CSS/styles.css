@@ -68,9 +68,9 @@ body {
 /* Contenedor grid de tarjetas */
 .grid-container-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajuste automático */
-    gap: 10px;
-    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajuste automático */
+    gap: 40px;
+    padding: 40px;
     justify-items: center;
 }
 
@@ -203,4 +203,20 @@ body::before {
         margin-top: 20px;
         margin-bottom: 20px;
     }
+}
+
+/* Contenedor para las imágenes de error */
+.image-container {
+    background-image: url('../images/error_img.png');
+    width: 100%;
+    height: 400px; /* Ajusta el tamaño según necesites */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Estilo de las imágenes */
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

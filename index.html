@@ -15,8 +15,46 @@
 
 <body>
 
-    <!-- Contenedor para cargar el navbar dinámicamente -->
+    <!-- Navbar con botón para ver carrito -->
     <div id="navbar"></div>
+
+    <!-- Menú tipo hamburguesa para ver el carrito -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="carritoLink" data-bs-toggle="modal" data-bs-target="#carritoModal">
+                            Carrito (<span id="carritoCount">0</span>)
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modal para mostrar el carrito -->
+    <div class="modal fade" id="carritoModal" tabindex="-1" aria-labelledby="carritoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="carritoModalLabel">Resumen del Carrito</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="carritoResumen">
+                    <!-- Aquí se mostrará el resumen del carrito -->
+                    <p>No hay productos en el carrito.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Proceder a la compra</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <h1 class="tituloH1">PRODUCTOS DESTACADOS!</h1>
 
@@ -26,31 +64,24 @@
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="/images/item_01_FF.png" class="d-block w-100" alt="...">
+                <img src="/images/item_01_FF.png" class="d-block w-100" alt="..." onerror="this.onerror=null; this.src='/images/imagen-emergencia.jpg';">
                 <div class="carousel-caption d-none d-md-block">
                     <h4>Articulo #1</h4>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="/images/item_02_FF.png" class="d-block w-100" alt="...">
+                <img src="/images/item_02_FF.png" class="d-block w-100" alt="..." onerror="this.onerror=null; this.src='/images/imagen-emergencia.jpg';">
                 <div class="carousel-caption d-none d-md-block">
                     <h4>Articulo #2</h4>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="/images/item_03_Kirby.png" class="d-block w-100" alt="...">
+                <img src="/images/item_03_Kirby.png" class="d-block w-100" alt="..." onerror="this.onerror=null; this.src='/images/imagen-emergencia.jpg';">
                 <div class="carousel-caption d-none d-md-block">
                     <h4>Articulo #3</h4>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="/images/item_04_DK.png" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h4>Articulo #4</h4>
                 </div>
             </div>
         </div>
@@ -64,43 +95,13 @@
         </button>
     </div>
 
-   
+    <!-- Contenedor de productos -->
+    <div class="grid-container-cards" id="productos-container"></div>
 
-    <!-- Productos destacados -->
-    <div class="grid-container-cards">
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="/images/item_01_FF.png" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Articulo #1</h5>
-                <p class="card-text">Remera Final Fantasy</p>
-                <h3 class="card-text">ARS: $15000</h3>
-                <a href="#" class="btn btn-comprar">Comprar</a>
-                <a href="#" class="btn btn-carrito">Carrito +1</a>
-            </div>
-        </div>
-
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="/images/item_02_FF.png" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Articulo #2</h5>
-                <p class="card-text">Remera Final Fantasy VII</p>
-                <h3 class="card-text">ARS: $15000</h3>
-                <a href="#" class="btn btn-comprar">Comprar</a>
-                <a href="#" class="btn btn-carrito">Carrito +1</a>
-            </div>
-        </div>
-
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="/images/item_03_Kirby.png" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Articulo #3</h5>
-                <p class="card-text">Remera Kirby</p>
-                <h3 class="card-text">ARS: $15000</h3>
-                <a href="#" class="btn btn-comprar">Comprar</a>
-                <a href="#" class="btn btn-carrito">Carrito +1</a>
-            </div>
-        </div>
-    </div>
+    <!-- Contenedor de paginación -->
+    <nav aria-label="Paginación de productos" class="mt-4">
+        <ul class="pagination justify-content-center" id="pagination-container"></ul>
+    </nav>
 
     <!-- Contenedor para cargar el footer dinámicamente -->
     <div id="footer"></div>
@@ -108,7 +109,110 @@
     <!-- Scripts -->
     <script src="/js/loadComponents.js"></script> <!-- Cargar componentes dinámicamente -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    
+
+    <!-- Script para cargar productos desde JSON con paginación y funcionalidad de carrito -->
+    <script>
+        const itemsPerPage = 6; // Cantidad de productos por página
+        let currentPage = 1;
+        let productos = [];
+        let carrito = [];
+
+        // Función para renderizar los productos en una página específica
+        function renderProducts(page) {
+            const container = document.getElementById('productos-container');
+            container.innerHTML = '';
+            const start = (page - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+            const productosPagina = productos.slice(start, end);
+
+            productosPagina.forEach(producto => {
+                const card = `
+                    <div class="card" style="width: 18rem; margin: 1rem;">
+                        <img class="card-img-top" src="${producto.imagen}" alt="${producto.nombre}" onerror="this.onerror=null; this.src='/images/imagen-emergencia.jpg';">
+                        <div class="card-body">
+                            <h5 class="card-title">${producto.titulo}</h5>
+                            <p class="card-text">${producto.descripcion}</p>
+                            <h3 class="card-text">ARS: $${producto.precio}</h3>
+                            <button class="btn btn-secondary" onclick="agregarAlCarrito(${producto.id})">Agregar</button>
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += card;
+            });
+        }
+
+        // Función para renderizar la paginación
+        function renderPagination() {
+            const paginationContainer = document.getElementById('pagination-container');
+            paginationContainer.innerHTML = '';
+            const totalPages = Math.ceil(productos.length / itemsPerPage);
+
+            for (let i = 1; i <= totalPages; i++) {
+                const li = document.createElement('li');
+                li.className = 'page-item' + (i === currentPage ? ' active' : '');
+                li.innerHTML = `<button class="page-link">${i}</button>`;
+                li.addEventListener('click', () => {
+                    currentPage = i;
+                    renderProducts(currentPage);
+                    renderPagination();
+                });
+                paginationContainer.appendChild(li);
+            }
+        }
+
+        // Función para agregar productos al carrito
+        function agregarAlCarrito(productoId) {
+            const producto = productos.find(p => p.id === productoId);
+            if (producto) {
+                carrito.push(producto);
+                actualizarCarrito();
+            }
+        }
+
+        // Función para eliminar productos del carrito
+        function eliminarDelCarrito(productoId) {
+            carrito = carrito.filter(p => p.id !== productoId);
+            actualizarCarrito();
+        }
+
+        // Función para actualizar el número de productos en el carrito
+        function actualizarCarrito() {
+            document.getElementById('carritoCount').textContent = carrito.length;
+            renderCarritoResumen();
+        }
+
+        // Función para renderizar el resumen del carrito
+        function renderCarritoResumen() {
+            const carritoResumen = document.getElementById('carritoResumen');
+            carritoResumen.innerHTML = '';
+            if (carrito.length === 0) {
+                carritoResumen.innerHTML = '<p>No hay productos en el carrito.</p>';
+            } else {
+                carrito.forEach(producto => {
+                    carritoResumen.innerHTML += `
+                        <div class="d-flex justify-content-between">
+                            <span>${producto.titulo}</span>
+                            <button class="btn btn-danger btn-sm" onclick="eliminarDelCarrito(${producto.id})">Eliminar</button>
+                        </div>
+                    `;
+                });
+            }
+        }
+
+        // Cargar productos desde el archivo JSON
+        fetch('/productos.json')
+            .then(response => response.json())
+            .then(data => {
+                productos = data;
+                renderProducts(currentPage);
+                renderPagination();
+            });
+
+        // Cargar componentes estáticos
+        loadNavbar();
+        loadFooter();
+    </script>
+
 </body>
 
 </html>
